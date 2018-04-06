@@ -5,7 +5,18 @@ using System.Web;
 
 namespace SolarMag.com.Models
 {
-    public class Pile
+    public class Pile : Item
     {
+        public decimal Amperage { get; set; }
+
+        public decimal Voltage { get; set; }
+        
+        public decimal Capacite { get; set; }
+
+        public decimal Dimension { get; set; }
+
+        public Pile()
+        {
+        }
     }
 }

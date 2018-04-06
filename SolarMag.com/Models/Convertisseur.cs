@@ -5,7 +5,7 @@ using System.Web;
 
 namespace SolarMag.com.Models
 {
-    public class Convertisseur
+    public class Convertisseur : Item
     {
     }
 }
