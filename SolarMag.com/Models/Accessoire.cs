@@ -7,6 +7,6 @@ namespace SolarMag.com.Models
 {
     public class Accessoire
     {
-        int test;
+        int test=4;
     }
 }
