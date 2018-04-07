@@ -15,7 +15,7 @@ namespace SolarMag.com.Models
 
         public string NoFacture { get; set; }
 
-        public string BonLivraison { get; set; }
+      
 
         public Client()
         {
