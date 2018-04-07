@@ -14,8 +14,8 @@ namespace SolarMag.com.Models
         public virtual List<Commande> Commandes { get; set; }
 
         public string NoFacture { get; set; }
+        public string BonLivraison { get; set; }
 
-      
 
         public Client()
         {
