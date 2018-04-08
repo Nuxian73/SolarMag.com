@@ -20,8 +20,6 @@ namespace SolarMag.com.Controllers
 
         public AccountController()
         {
-
-
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
