@@ -7,5 +7,12 @@ namespace SolarMag.com.Models
 {
     public class Panier
     {
+
+            
+
+
+
+
+
     }
 }
