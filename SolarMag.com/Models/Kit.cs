@@ -9,11 +9,11 @@ namespace SolarMag.com.Models
     {
         public Pile Pile { get; set; }
 
-        public PanneauSolaire PanneauSolaire { get; set; }
+        public virtual PanneauSolaire PanneauSolaire { get; set; }
         
-        public Convertisseur Convertisseur { get; set; }
+        public virtual Convertisseur Convertisseur { get; set; }
 
-        public Accessoire Accessoire { get; set; }
+        public virtual Accessoire Accessoire { get; set; }
 
         public Kit()
         {

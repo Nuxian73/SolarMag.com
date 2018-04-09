@@ -9,11 +9,13 @@ namespace SolarMag.com.Models
 {
     public class Item
     {
-        public int Id { get; set; }
+        public uint Id { get; set; }
 
         [Required(ErrorMessage = "Nom de produit requit")]
         [MaxLength(40, ErrorMessage = " maximum 40 caractères")]
         public string Nom { get; set; }
+
+        public string NoReference { get; set; }
 
         public string Fabricant { get; set; }
 
@@ -48,8 +50,6 @@ namespace SolarMag.com.Models
 
         [ReadOnly(true)]
         public Categories Categorie;
-
-        public int Quantite { get; set; }
 
         public Item()
         {
