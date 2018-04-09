@@ -13,7 +13,7 @@ namespace SolarMag.com.Models
         
         public decimal Capacite { get; set; }
 
-        public decimal Dimension { get; set; }
+        public decimal Dimensions { get; set; }
 
         public Pile()
         {
