@@ -14,5 +14,10 @@ namespace SolarMag.com.Models
         public decimal Dimensions { get; set; }
 
         public string Composition { get; set; }
+
+        public PanneauSolaire()
+        {
+            Categorie = Categories.PanneauSolaire;
+        }
     }
 }
