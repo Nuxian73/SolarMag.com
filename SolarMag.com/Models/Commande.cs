@@ -8,7 +8,7 @@ namespace SolarMag.com.Models
 {
     public class Commande
     {
-        public int Id { get; set; }
+        public uint Id { get; set; }
 
         public string NoPanier { get; set; }
 
@@ -25,8 +25,14 @@ namespace SolarMag.com.Models
         [Display(Name = "Quantité")]
         public int Quantite{ get; set; }
 
+        [Display(Name = "Items")]
+        public virtual Item Item { get; set; }
 
-        public virtual Item Items { get; set; }
+        [RegularExpression(@"^\d+.\d{0,2}$", ErrorMessage = "La valeur décimale est de 2 chiffres après le point")]
+        [Range(0, 5, ErrorMessage = "La valeur maximun est 5 chiffres")]
+        public decimal Prix { get;  }
+
+
         public virtual Compte Comptes { get; set; }
 
     }

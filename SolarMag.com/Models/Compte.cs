@@ -7,7 +7,7 @@ namespace SolarMag.com.Models
 {
     public class Compte
     {
-        public int Id { get; set; }
+        public uint Id { get; set; }
 
         public string Nom { get; set; }
 
