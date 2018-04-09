@@ -18,7 +18,7 @@ namespace SolarMag.com.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "Date de Commande")]
-        public DateTime DateCommande { get; set; }
+        public System.DateTime DateCommande { get; set; }
 
 
         public string Coordonnee { get; set; }
