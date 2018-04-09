@@ -10,9 +10,9 @@ namespace SolarMag.com.Models
     {
         public uint Id { get; set; }
 
-        
+
         // no ligne,liste no item,nom item, prix Unitaire,quantité,prix total/ligne
-        public Dictionary<uint, Tuple<List<string>>> PanierVendu { get; set;}
+        public Dictionary<uint, Tuple<List<string>>> PanierVendu { get; set; }
 
 
         [DataType(DataType.Date)]
@@ -26,5 +26,8 @@ namespace SolarMag.com.Models
 
         public virtual Compte Comptes { get; set; }
 
+        public Commande()
+            {
+            }
     }
 }

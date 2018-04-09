@@ -26,6 +26,8 @@ namespace SolarMag.com.Models
 
     
         public virtual List<Commande> Commandes { get; set; }
+
+        //Liste de coordonnées pour expédition
         public List<Coordonnee> ListeCoordonnee { get; set; }
 
         public Client()
