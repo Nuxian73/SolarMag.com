@@ -17,7 +17,7 @@ namespace SolarMag.com.Models
 
         public PanneauSolaire()
         {
-            Categorie = Categories.PanneauSolaire;
+            this.Categorie = Categories.PanneauSolaire;
         }
     }
 }

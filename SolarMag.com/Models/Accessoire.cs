@@ -17,7 +17,7 @@ namespace SolarMag.com.Models
 
         public Accessoire()
         {
-            Categorie = Categories.Accessoire;
+            this.Categorie = Categories.Accessoire;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace SolarMag.com.Models
 
         public Convertisseur()
         {
-            Categorie = Categories.Convertiseur;
+            this.Categorie = Categories.Convertiseur;
         }
     }
 }

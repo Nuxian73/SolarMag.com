@@ -17,7 +17,7 @@ namespace SolarMag.com.Models
 
         public Kit()
         {
-            Categorie = Categories.Kit;
+            this.Categorie = Categories.Kit;
         }
     }
 }
