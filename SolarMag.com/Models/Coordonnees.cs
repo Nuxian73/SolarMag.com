@@ -5,7 +5,7 @@ using System.Web;
 
 namespace SolarMag.com.Models
 {
-    public class Coordonnees
+    public class Coordonnees : Compte
     {
         public int NoCivique { get; set; }
 
@@ -19,6 +19,7 @@ namespace SolarMag.com.Models
 
         public string CodePostal_ZipCode { get; set; }
 
+        public string Telephone { get; set; }
 
 
     }
