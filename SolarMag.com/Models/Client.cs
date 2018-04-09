@@ -7,21 +7,30 @@ namespace SolarMag.com.Models
 {
     public class Client : Compte
     {
-        public int NoClient { get; set; }
+        public uint NoClient { get; set; }
 
-        
-
+        //facturation livraison
         public string NoFacture { get; set; }
         public string BonLivraison { get; set; }
 
+        //Panier
 
         public virtual Panier Panier { get; set; }
 
+
+
+
+        //Commandes
+
+       
+
+    
         public virtual List<Commande> Commandes { get; set; }
+
 
         public Client()
         {
-            this.Panier = new Panier();
+           
             this.Commandes = new List<Commande>();
         }
     }
