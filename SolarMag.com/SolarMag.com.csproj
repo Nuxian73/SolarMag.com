@@ -202,7 +202,7 @@
     <Compile Include="Models\Commande.cs" />
     <Compile Include="Models\Compte.cs" />
     <Compile Include="Models\Convertisseur.cs" />
-    <Compile Include="Models\Coordonnees.cs" />
+    <Compile Include="Models\Coordonnee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Kit.cs" />

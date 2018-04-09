@@ -5,9 +5,9 @@ using System.Web;
 
 namespace SolarMag.com.Models
 {
-    public class Coordonnees : Compte
+    public class Coordonnee
     {
-        public int NoCivique { get; set; }
+        public uint NoCivique { get; set; }
 
         public string Adresse { get; set; }
 
