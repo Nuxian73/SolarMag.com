@@ -21,6 +21,8 @@ namespace SolarMag.com.Models
 
         public string Telephone { get; set; }
 
-
+        public Coordonnee()
+        {
+        }
     }
 }
