@@ -9,13 +9,15 @@ namespace SolarMag.com.Models
     {
         public int NoClient { get; set; }
 
-        public virtual Panier Panier { get; set; }
-
-        public virtual List<Commande> Commandes { get; set; }
+        
 
         public string NoFacture { get; set; }
         public string BonLivraison { get; set; }
 
+
+        public virtual Panier Panier { get; set; }
+
+        public virtual List<Commande> Commandes { get; set; }
 
         public Client()
         {
