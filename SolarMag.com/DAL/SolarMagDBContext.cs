@@ -8,7 +8,7 @@ using System.Web;
 
 namespace SolarMag.com.DAL
 {
-    public class SolarMagContext : DbContext
+    public class SolarMagDBContext : DbContext
     {
         public DbSet<Item> Items { get; set; }
 
