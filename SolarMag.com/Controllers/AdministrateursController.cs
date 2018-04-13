@@ -28,7 +28,7 @@ namespace SolarMag.com.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Administrateur administrateur = db.Comptes.Find(id);
+            Administrateur administrateur = db.Administrateurs.Find(id);
             if (administrateur == null)
             {
                 return HttpNotFound();
@@ -66,7 +66,7 @@ namespace SolarMag.com.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Administrateur administrateur = db.Comptes.Find(id);
+            Administrateur administrateur = db.Administrateurs.Find(id);
             if (administrateur == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace SolarMag.com.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Administrateur administrateur = db.Comptes.Find(id);
+            Administrateur administrateur = db.Administrateurs.Find(id);
             if (administrateur == null)
             {
                 return HttpNotFound();
@@ -110,7 +110,7 @@ namespace SolarMag.com.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Administrateur administrateur = db.Comptes.Find(id);
+            Administrateur administrateur = db.Administrateurs.Find(id);
             db.Comptes.Remove(administrateur);
             db.SaveChanges();
             return RedirectToAction("Index");

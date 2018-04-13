@@ -28,7 +28,7 @@ namespace SolarMag.com.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Client client = db.Comptes.Find(id);
+            Client client = db.Clients.Find(id);
             if (client == null)
             {
                 return HttpNotFound();
@@ -66,7 +66,7 @@ namespace SolarMag.com.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Client client = db.Comptes.Find(id);
+            Client client = db.Clients.Find(id);
             if (client == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace SolarMag.com.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Client client = db.Comptes.Find(id);
+            Client client = db.Clients.Find(id);
             if (client == null)
             {
                 return HttpNotFound();
@@ -110,7 +110,7 @@ namespace SolarMag.com.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Client client = db.Comptes.Find(id);
+            Client client = db.Clients.Find(id);
             db.Comptes.Remove(client);
             db.SaveChanges();
             return RedirectToAction("Index");

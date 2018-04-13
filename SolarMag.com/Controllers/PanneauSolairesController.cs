@@ -28,7 +28,7 @@ namespace SolarMag.com.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PanneauSolaire panneauSolaire = db.Items.Find(id);
+            PanneauSolaire panneauSolaire = db.PanneauSolaires.Find(id);
             if (panneauSolaire == null)
             {
                 return HttpNotFound();
@@ -66,7 +66,7 @@ namespace SolarMag.com.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PanneauSolaire panneauSolaire = db.Items.Find(id);
+            PanneauSolaire panneauSolaire = db.PanneauSolaires.Find(id);
             if (panneauSolaire == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace SolarMag.com.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PanneauSolaire panneauSolaire = db.Items.Find(id);
+            PanneauSolaire panneauSolaire = db.PanneauSolaires.Find(id);
             if (panneauSolaire == null)
             {
                 return HttpNotFound();
@@ -110,7 +110,7 @@ namespace SolarMag.com.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            PanneauSolaire panneauSolaire = db.Items.Find(id);
+            PanneauSolaire panneauSolaire = db.PanneauSolaires.Find(id);
             db.Items.Remove(panneauSolaire);
             db.SaveChanges();
             return RedirectToAction("Index");

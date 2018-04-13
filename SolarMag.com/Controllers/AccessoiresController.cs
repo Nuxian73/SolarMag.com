@@ -28,7 +28,7 @@ namespace SolarMag.com.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Accessoire accessoire = db.Items.Find(id);
+            Accessoire accessoire = db.Accessoires.Find(id);
             if (accessoire == null)
             {
                 return HttpNotFound();
@@ -66,7 +66,7 @@ namespace SolarMag.com.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Accessoire accessoire = db.Items.Find(id);
+            Accessoire accessoire = db.Accessoires.Find(id);
             if (accessoire == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace SolarMag.com.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Accessoire accessoire = db.Items.Find(id);
+            Accessoire accessoire = db.Accessoires.Find(id);
             if (accessoire == null)
             {
                 return HttpNotFound();
@@ -110,7 +110,7 @@ namespace SolarMag.com.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Accessoire accessoire = db.Items.Find(id);
+            Accessoire accessoire = db.Accessoires.Find(id);
             db.Items.Remove(accessoire);
             db.SaveChanges();
             return RedirectToAction("Index");
