@@ -1,0 +1,72 @@
+﻿@model SolarMag.com.Models.Coordonnee
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Coordonnee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ville)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ville)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Province_Etat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Province_Etat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pays)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pays)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodePostal_ZipCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodePostal_ZipCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telephone)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

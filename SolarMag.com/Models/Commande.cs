@@ -8,7 +8,7 @@ namespace SolarMag.com.Models
 {
     public class Commande
     {
-        public uint Id { get; set; }
+        public int Id { get; set; }
 
 
         // no ligne,liste no item,nom item, prix Unitaire,quantité,prix total/ligne

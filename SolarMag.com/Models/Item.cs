@@ -9,7 +9,7 @@ namespace SolarMag.com.Models
 {
     public class Item
     {
-        public uint Id { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "Nom de produit requit")]
         [MaxLength(40, ErrorMessage = " maximum 40 caractères")]

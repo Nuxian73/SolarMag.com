@@ -7,6 +7,8 @@ namespace SolarMag.com.Models
 {
     public class Coordonnee
     {
+        public int Id { get; set; }
+
         public uint NoCivique { get; set; }
 
         public string Adresse { get; set; }
