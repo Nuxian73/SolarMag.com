@@ -18,7 +18,7 @@ namespace SolarMag.com.Controllers
         // GET: Accessoires
         public ActionResult Index()
         {
-            return View(db.Items.ToList());
+            return View(db.Accessoires.ToList());
         }
 
         // GET: Accessoires/Details/5
@@ -51,7 +51,7 @@ namespace SolarMag.com.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Items.Add(accessoire);
+                db.Accessoires.Add(accessoire);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -111,7 +111,7 @@ namespace SolarMag.com.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Accessoire accessoire = db.Accessoires.Find(id);
-            db.Items.Remove(accessoire);
+            db.Accessoires.Remove(accessoire);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

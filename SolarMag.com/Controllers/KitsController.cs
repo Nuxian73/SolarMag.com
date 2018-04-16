@@ -18,7 +18,7 @@ namespace SolarMag.com.Controllers
         // GET: Kits
         public ActionResult Index()
         {
-            return View(db.Items.ToList());
+            return View(db.Kits.ToList());
         }
 
         // GET: Kits/Details/5
@@ -51,7 +51,7 @@ namespace SolarMag.com.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Items.Add(kit);
+                db.Kits.Add(kit);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -111,7 +111,7 @@ namespace SolarMag.com.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Kit kit = db.Kits.Find(id);
-            db.Items.Remove(kit);
+            db.Kits.Remove(kit);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

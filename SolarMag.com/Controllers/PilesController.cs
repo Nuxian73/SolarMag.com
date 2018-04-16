@@ -18,7 +18,7 @@ namespace SolarMag.com.Controllers
         // GET: Piles
         public ActionResult Index()
         {
-            return View(db.Items.ToList());
+            return View(db.Piles.ToList());
         }
 
         // GET: Piles/Details/5
@@ -51,7 +51,7 @@ namespace SolarMag.com.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Items.Add(pile);
+                db.Piles.Add(pile);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -111,7 +111,7 @@ namespace SolarMag.com.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Pile pile = db.Piles.Find(id);
-            db.Items.Remove(pile);
+            db.Piles.Remove(pile);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

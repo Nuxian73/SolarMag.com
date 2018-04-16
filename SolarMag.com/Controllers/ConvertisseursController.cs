@@ -18,7 +18,7 @@ namespace SolarMag.com.Controllers
         // GET: Convertisseurs
         public ActionResult Index()
         {
-            return View(db.Items.ToList());
+            return View(db.Convertisseurs.ToList());
         }
 
         // GET: Convertisseurs/Details/5
@@ -51,7 +51,7 @@ namespace SolarMag.com.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Items.Add(convertisseur);
+                db.Convertisseurs.Add(convertisseur);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -111,7 +111,7 @@ namespace SolarMag.com.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Convertisseur convertisseur = db.Convertisseurs.Find(id);
-            db.Items.Remove(convertisseur);
+            db.Convertisseurs.Remove(convertisseur);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

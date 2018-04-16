@@ -18,7 +18,7 @@ namespace SolarMag.com.Controllers
         // GET: PanneauSolaires
         public ActionResult Index()
         {
-            return View(db.Items.ToList());
+            return View(db.PanneauSolaires.ToList());
         }
 
         // GET: PanneauSolaires/Details/5
@@ -51,7 +51,7 @@ namespace SolarMag.com.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Items.Add(panneauSolaire);
+                db.PanneauSolaires.Add(panneauSolaire);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -111,7 +111,7 @@ namespace SolarMag.com.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             PanneauSolaire panneauSolaire = db.PanneauSolaires.Find(id);
-            db.Items.Remove(panneauSolaire);
+            db.PanneauSolaires.Remove(panneauSolaire);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
