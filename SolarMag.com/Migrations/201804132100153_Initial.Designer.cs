@@ -13,7 +13,7 @@ namespace SolarMag.com.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201804132031124_Initial"; }
+            get { return "201804132100153_Initial"; }
         }
         
         string IMigrationMetadata.Source
