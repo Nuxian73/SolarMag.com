@@ -10,6 +10,7 @@ namespace SolarMag.com.Models
     {
         public Pile Pile { get; set; }
 
+        [Display(Name = "Panneau solaire")]
         public virtual PanneauSolaire PanneauSolaire { get; set; }
         
         public virtual Convertisseur Convertisseur { get; set; }

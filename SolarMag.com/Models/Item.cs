@@ -11,10 +11,12 @@ namespace SolarMag.com.Models
     {
         public int Id { get; set; }
 
+        [Display(Name ="Produit")]
         [Required(ErrorMessage = "Nom de produit requis")]
         [StringLength(40, ErrorMessage = "Maximum 40 caractères")]
         public string Nom { get; set; }
 
+        [Display(Name ="Référence")]
         [Required(ErrorMessage = "Numéro de référence requis")]
         [StringLength(40, ErrorMessage = "Maximum 40 caractères")]
         public string NoReference { get; set; }
@@ -38,6 +40,7 @@ namespace SolarMag.com.Models
         [Range(0, 1000000, ErrorMessage = "Valeur de 0,00 à 1000000,00")]
         public decimal Prix { get; set; }
 
+        [Display(Name = "Stock")]
         [Required(ErrorMessage = "Quantité du produit requise")]
         [Range(0, 1000000, ErrorMessage = "Valeur de 0 à 1000000")]
         public uint Quantite { get; set; }
