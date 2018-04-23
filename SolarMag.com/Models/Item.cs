@@ -32,19 +32,19 @@ namespace SolarMag.com.Models
         //Pour identifer les sous- produits  genre piles, panneau, accessoires et kit
         public enum Categories
         {
-            [Description("Pile de stockage")]
+            [Display(Name ="Pile de stockage")]
             Pile,
 
-            [Description("Panneau solaire")]
+            [Display(Name = "Panneau solaire")]
             PanneauSolaire,
 
-            [Description("Accessoire divers")]
+            [Display(Name = "Accessoire divers")]
             Accessoire,
 
-            [Description("Convertiseur électrique")]
+            [Display(Name = "Convertiseur électrique")]
             Convertiseur,
 
-            [Description("Ensemble / kit")]
+            [Display(Name = "Ensemble / kit")]
             Kit
         }
 

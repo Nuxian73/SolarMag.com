@@ -15,7 +15,7 @@ namespace SolarMag.com.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Les hivers vs les panneaux solaire, est-ce fonctionnel ?";
 
             return View();
         }

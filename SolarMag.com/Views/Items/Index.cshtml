@@ -4,11 +4,19 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Catalogue</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@using (Html.BeginForm())
+{
+    <p>
+        Select Department: @Html.DropDownList("CategorieList", EnumHelper.GetSelectList
+                          (typeof(SolarMag.com.Models.Item.Categories)), "Selectionner une catégorie",
+                          new { @class = "form-control" })
+        <input type="submit" value="Filter" />
+    </p>
+}
+
+
 <table class="table">
     <tr>
         <th>
@@ -35,35 +43,36 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NoReference)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Fabricant)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Poids)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Garantie)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Prix)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoReference)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fabricant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Poids)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Garantie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prix)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
 
 </table>

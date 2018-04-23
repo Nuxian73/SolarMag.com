@@ -16,10 +16,27 @@ namespace SolarMag.com.Controllers
         private SolarMagDBContext db = new SolarMagDBContext();
 
         // GET: Items
-        public ActionResult Index()
+        public ActionResult Index(Item.Categories? CategorieChoisie)
         {
-            return View(db.Items.ToList());
+            List<Item> abcd = db.Items.ToList();
+            return View(abcd.Where(c => !CategorieChoisie.HasValue || c.Categorie == CategorieChoisie));
         }
+        /*
+        // GET: Course
+        public ActionResult Index(int? SelectedItemsType)
+        {
+            var departments = db.Departments.OrderBy(q => q.Name).ToList();
+            ViewBag.SelectedDepartment = new SelectList(departments, "DepartmentID", "Name", SelectedDepartment);
+            int departmentID = SelectedDepartment.GetValueOrDefault();
+
+            IQueryable<Course> courses = db.Courses
+                .Where(c => !SelectedDepartment.HasValue || c.DepartmentID == departmentID)
+                .OrderBy(d => d.CourseID)
+                .Include(d => d.Department);
+            var sql = courses.ToString();
+            return View(courses.ToList());
+        }
+        */
 
         // GET: Items/Details/5
         public ActionResult Details(int? id)

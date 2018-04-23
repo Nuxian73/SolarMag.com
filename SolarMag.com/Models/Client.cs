@@ -14,17 +14,9 @@ namespace SolarMag.com.Models
         public string BonLivraison { get; set; }
 
         //Panier
-
         public virtual Panier Panier { get; set; }
 
-
-
-
         //Commandes
-
-       
-
-    
         public virtual List<Commande> Commandes { get; set; }
 
         //Liste de coordonnées pour expédition
@@ -32,7 +24,6 @@ namespace SolarMag.com.Models
 
         public Client()
         {
-           
             this.Commandes = new List<Commande>();
         }
     }

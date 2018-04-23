@@ -18,7 +18,7 @@ namespace SolarMag.com.Controllers
         // GET: Clients
         public ActionResult Index()
         {
-            return View(db.Comptes.ToList());
+            return View(db.Clients.ToList());
         }
 
         // GET: Clients/Details/5
