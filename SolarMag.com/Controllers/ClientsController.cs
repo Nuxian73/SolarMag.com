@@ -51,6 +51,8 @@ namespace SolarMag.com.Controllers
         {
             if (ModelState.IsValid)
             {
+                client.Panier = new Panier();
+                db.Paniers.Add(client.Panier);
                 db.Comptes.Add(client);
                 db.SaveChanges();
                 return RedirectToAction("Index");

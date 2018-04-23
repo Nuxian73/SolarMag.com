@@ -7,7 +7,7 @@ namespace SolarMag.com.Models
 {
     public class Client : Compte
     {
-        public uint NoClient { get; set; }
+        public uint ClientId { get; set; }
 
         //facturation livraison
         public string NoFacture { get; set; }
@@ -25,6 +25,7 @@ namespace SolarMag.com.Models
         public Client()
         {
             this.Commandes = new List<Commande>();
+            
         }
     }
 }

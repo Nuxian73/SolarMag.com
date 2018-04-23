@@ -9,8 +9,17 @@
 <div>
     <h4>Panier</h4>
     <hr />
-    <dl class="dl-horizontal">
-    </dl>
+    
+@foreach ( var Item in Model.ItemList)
+{
+   <p>
+       @Item.Key.Nom @Item.Value
+
+   </p>
+}
+
+
+
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |

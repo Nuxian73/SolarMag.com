@@ -10,11 +10,28 @@ namespace SolarMag.com.Models
         public int Id { get; set; }
 
         //Ligne, Item et quantité
-        public virtual Dictionary<uint, Tuple<Item, uint>> ItemList { get; set; }
+        public virtual Dictionary<Item, uint> ItemList { get; set; }
 
         public Panier()
         {
+           
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //  Example de contenu   pour voir ce que doit avoir un  panier
 

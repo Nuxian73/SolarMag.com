@@ -33,6 +33,7 @@ namespace SolarMag.com.Controllers
         // GET: Items/Details/5
         public ActionResult Details(int? id)
         {
+            ViewBag.ClientList = db.Clients.ToList();
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

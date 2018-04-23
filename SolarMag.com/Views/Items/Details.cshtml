@@ -2,7 +2,22 @@
 
 @{
     ViewBag.Title = "Details";
+
+    SelectList ClientSelectList = new SelectList(ViewBag.ClientList,"Id","Nom");
+
 }
+
+
+@using (Html.BeginForm("Ajouter","Paniers",new { ItemId = Model.Id}, FormMethod.Post,null))
+{
+    <p>
+        Select Department: @Html.DropDownList("ClientSelectList", ClientSelectList, "Selectionner un client",
+            new { @class = "form-control" })
+        <input type="submit" value="Ajouter au panier" />
+    </p>
+}
+
+
 
 <h2>Details</h2>
 
@@ -68,6 +83,11 @@
 
     </dl>
 </div>
+
+
+
+
+
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
