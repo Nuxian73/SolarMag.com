@@ -2,19 +2,21 @@
 
 @{
     ViewBag.Title = "Index";
-
-    SolarMag.com.Models.Item.Categories? CategoriesSelectionnee = null;
 }
 
 <h2>Catalogue</h2>
 
+<p>
+    @Html.ActionLink("Créer un nouvel item à ajouter au catalogue", "Create")
+</p>
+
 @using (Html.BeginForm())
 {
     <p>
-        Select Department: @Html.DropDownList("CategorieList", EnumHelper.GetSelectList
-                          (typeof(SolarMag.com.Models.Item.Categories)), "Selectionner une catégorie",
+        Sélectionner une catégorie : @Html.DropDownList("CategorieList", EnumHelper.GetSelectList
+                          (typeof(SolarMag.com.Models.Item.Categories)), "Toutes les catégories",
                           new { @class = "form-control" })
-        <input type="submit" value="Filter" />
+        <input type="submit" value="Filtrer" />
     </p>
 }
 

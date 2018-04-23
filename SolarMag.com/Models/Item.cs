@@ -11,23 +11,39 @@ namespace SolarMag.com.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Nom de produit requit")]
-        [MaxLength(40, ErrorMessage = " maximum 40 caractères")]
+        [Display(Name ="Produit")]
+        [Required(ErrorMessage = "Nom de produit requis")]
+        [StringLength(40, ErrorMessage = "Maximum 40 caractères")]
         public string Nom { get; set; }
 
+        [Display(Name ="Référence")]
+        [Required(ErrorMessage = "Numéro de référence requis")]
+        [StringLength(40, ErrorMessage = "Maximum 40 caractères")]
         public string NoReference { get; set; }
 
+        [Required(ErrorMessage = "Nom du fabricant requis")]
+        [StringLength(40, ErrorMessage = " Maximum 40 caractères")]
         public string Fabricant { get; set; }
 
+        [StringLength(200, ErrorMessage = "Maximum 200 caractères")]
         public string Description { get; set; }
 
-        public decimal Poids { get; set; }
+        [Required(ErrorMessage = "Valeur de poids requise")]
+        [Range(0, 1000000, ErrorMessage = "Valeur de 0,00 à 1000000,00")]
+        [Display(Name = "Poids en KG")]
+        public double Poids { get; set; }
 
+        [StringLength(40, ErrorMessage = " Maximum 40 caractères")]
         public string Garantie { get; set; }
 
-        [RegularExpression(@"^\d+.\d{0,2}$", ErrorMessage = "La valeur décimale est de 2 chiffres après le point")]
-        [Range(0,5,ErrorMessage = "La valeur maximun est 5 chiffres")]
+        [Required(ErrorMessage = "Valeur du produit requise")]
+        [Range(0, 1000000, ErrorMessage = "Valeur de 0,00 à 1000000,00")]
         public decimal Prix { get; set; }
+
+        [Display(Name = "Stock")]
+        [Required(ErrorMessage = "Quantité du produit requise")]
+        [Range(0, 1000000, ErrorMessage = "Valeur de 0 à 1000000")]
+        public uint Quantite { get; set; }
 
         //Pour identifer les sous- produits  genre piles, panneau, accessoires et kit
         public enum Categories
