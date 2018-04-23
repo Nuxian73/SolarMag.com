@@ -8,13 +8,17 @@
 
 <h2>Catalogue</h2>
 
+<p>
+    @Html.ActionLink("Créer un nouvelle item", "Create")
+</p>
+
 @using (Html.BeginForm())
 {
     <p>
         Select Department: @Html.DropDownList("CategorieList", EnumHelper.GetSelectList
                           (typeof(SolarMag.com.Models.Item.Categories)), "Selectionner une catégorie",
                           new { @class = "form-control" })
-        <input type="submit" value="Filter" />
+        <input type="submit" value="Filtrer" />
     </p>
 }
 
