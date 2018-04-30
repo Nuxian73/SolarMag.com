@@ -9,8 +9,8 @@ namespace SolarMag.com.Models
     {
         public int Id { get; set; }
 
-        //Ligne, Item et quantité
-        public virtual Dictionary<Item, uint> ItemList { get; set; }
+        // Liste des items dans le panier
+        public virtual List<PanierItem> PanierItems { get; set; }
 
         public Panier()
         {
