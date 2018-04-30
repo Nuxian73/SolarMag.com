@@ -2,26 +2,26 @@
 
 @{
     ViewBag.Title = "Details";
+
 }
 
 <h2>Details</h2>
 
 <div>
-    <h4>Panier</h4>
+    <h4>Panier de @ViewBag.ClientChoisi.Nom</h4>
     <hr />
-    
-@foreach ( var ItemDuPanier in Model.PanierItems)
-{
-   <p>
-       @ItemDuPanier.Item.Nom @ItemDuPanier.Quantite
 
-   </p>
-}
-
+    @foreach (var ItemDuPanier in Model.PanierItems)
+    {
+        <p>
+            @ItemDuPanier.Item.Nom @ItemDuPanier.Quantite
+        </p>
+    }
 
 
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Retour au panier", "Index")
+    @Html.ActionLink("Retour au catalogue", "Index", "Items")
 </p>
