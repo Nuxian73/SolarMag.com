@@ -116,11 +116,15 @@ namespace SolarMag.com.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
         [HttpPost]
         public ActionResult Ajouter(int ItemId)
         {
 
            Item Item=db.Items.Find(ItemId);
+
+
+
             string Choix = Request.Form.Get("ClientSelectList");
 
             Client ClientChoisi = null;
@@ -134,12 +138,21 @@ namespace SolarMag.com.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            
-
-            uint Quantite = 1;
+            uint quantite = 1;
 
             Panier Panier = db.Paniers.Find(ClientChoisi.Panier.Id);
 
+            PanierItem i = Panier.PanierItems.Find(PanierItem => PanierItem.Item.Id == ItemId);
+
+            if (i == null)
+            {
+                PanierItem panierItem = new PanierItem(Item, quantite);
+                db.Paniers.Add(Panier);
+               // new PanierItem(Item, quantite)
+            }
+            else
+                i.Quantite++;
+    
 
          //   if (Panier.ItemList == null)
          //       Panier.ItemList = new Dictionary<Item, uint>();
@@ -153,8 +166,8 @@ namespace SolarMag.com.Controllers
 
 
 
-            TryUpdateModel(Panier);
-            //db.Entry(Panier).State = EntityState.Modified;
+           // TryUpdateModel(Panier);
+            db.Entry(Panier).State = EntityState.Modified;
 
             db.SaveChanges();
             return RedirectToAction("Details",new {id=ClientChoisi.Panier.Id });
