@@ -21,5 +21,9 @@ namespace SolarMag.com.Models
             Item = item;
             Quantite = quantite;
         }
+
+        public PanierItem()
+        {
+        }
     }
 }

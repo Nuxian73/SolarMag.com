@@ -7,13 +7,13 @@ namespace SolarMag.com.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Init_encore : IMigrationMetadata
+    public sealed partial class Initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Init_encore));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201804232000295_Init_encore"; }
+            get { return "201804301551578_Initial"; }
         }
         
         string IMigrationMetadata.Source
