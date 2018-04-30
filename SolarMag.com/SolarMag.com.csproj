@@ -175,6 +175,10 @@
     <Compile Include="Migrations\201804232000295_Init_encore.Designer.cs">
       <DependentUpon>201804232000295_Init_encore.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804301313258_PanierItem.cs" />
+    <Compile Include="Migrations\201804301313258_PanierItem.Designer.cs">
+      <DependentUpon>201804301313258_PanierItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accessoire.cs" />
     <Compile Include="Models\Administrateur.cs" />
@@ -186,6 +190,7 @@
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Kit.cs" />
     <Compile Include="Models\Panier.cs" />
+    <Compile Include="Models\PanierItem.cs" />
     <Compile Include="Models\PanneauSolaire.cs" />
     <Compile Include="Models\Pile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -313,6 +318,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201804232000295_Init_encore.resx">
       <DependentUpon>201804232000295_Init_encore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804301313258_PanierItem.resx">
+      <DependentUpon>201804301313258_PanierItem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

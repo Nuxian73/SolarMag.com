@@ -33,5 +33,8 @@ namespace SolarMag.com.DAL
         public DbSet<Compte> Comptes { get; set; }
 
         public DbSet<Administrateur> Administrateurs { get; set; }
+
+        public DbSet<PanierItem> PanierItems { get; set; }
+
     }
 }
