@@ -137,17 +137,19 @@ namespace SolarMag.com.Controllers
             
 
             uint Quantite = 1;
+
             Panier Panier = db.Paniers.Find(ClientChoisi.Panier.Id);
-            if (Panier.ItemList == null)
-                Panier.ItemList = new Dictionary<Item, uint>();
+
+
+         //   if (Panier.ItemList == null)
+         //       Panier.ItemList = new Dictionary<Item, uint>();
                     
-            if (Panier.ItemList.ContainsKey(Item))
-             {
-                Quantite = Panier.ItemList[Item];
-                Quantite++;
-                
-            }
-            Panier.ItemList[Item] = Quantite;
+        //    if (Panier.ItemList.ContainsKey(Item))
+       //      {
+      //          Quantite = Panier.ItemList[Item];
+       //         
+       //     }
+       //     Panier.ItemList[Item] = Quantite;
 
 
 
