@@ -121,7 +121,7 @@ namespace SolarMag.com.Controllers
         public ActionResult Ajouter(int ItemId)
         {
 
-           Item Item=db.Items.Find(ItemId);
+           Item ItemChoisi=db.Items.Find(ItemId);
 
 
 
@@ -140,34 +140,36 @@ namespace SolarMag.com.Controllers
 
             uint quantite = 1;
 
-            Panier Panier = db.Paniers.Find(ClientChoisi.Panier.Id);
+            Panier PanierClient = db.Paniers.Find(ClientChoisi.Panier.Id);
 
-            PanierItem i = Panier.PanierItems.Find(PanierItem => PanierItem.Item.Id == ItemId);
+            PanierItem i = PanierClient.PanierItems.Find(PanierItem => PanierItem.Item.Id == ItemId);
 
             if (i == null)
             {
-                PanierItem panierItem = new PanierItem(Item, quantite);
-                db.Paniers.Add(Panier);
-               // new PanierItem(Item, quantite)
+               
+                PanierItem panierItem = new PanierItem(ItemChoisi, quantite);
+                PanierClient.PanierItems.Add(panierItem);
+                //db.Paniers.Add(PanierClient);
+               
             }
             else
-                i.Quantite++;
-    
+                PanierClient.PanierItems.Find(PanierItem => PanierItem.Item.Id == ItemId).Quantite++;
+            
 
-         //   if (Panier.ItemList == null)
-         //       Panier.ItemList = new Dictionary<Item, uint>();
-                    
-        //    if (Panier.ItemList.ContainsKey(Item))
-       //      {
-      //          Quantite = Panier.ItemList[Item];
-       //         
-       //     }
-       //     Panier.ItemList[Item] = Quantite;
+            //   if (Panier.ItemList == null)
+            //       Panier.ItemList = new Dictionary<Item, uint>();
+
+            //    if (Panier.ItemList.ContainsKey(Item))
+            //      {
+            //          Quantite = Panier.ItemList[Item];
+            //         
+            //     }
+            //     Panier.ItemList[Item] = Quantite;
 
 
 
-           // TryUpdateModel(Panier);
-            db.Entry(Panier).State = EntityState.Modified;
+           // TryUpdateModel(PanierClient);
+            db.Entry(PanierClient).State = EntityState.Modified;
 
             db.SaveChanges();
             return RedirectToAction("Details",new {id=ClientChoisi.Panier.Id });

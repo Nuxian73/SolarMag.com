@@ -11,8 +11,8 @@ namespace SolarMag.com.Models
         public int Id { get; set; }
 
         [Display(Name = "Produit")]
-        public Item Item { get; set; }
-
+        public virtual Item Item { get; set; }
+        
         [Display(Name = "Quantité")]
         public uint Quantite { get; set; }
 
