@@ -9,7 +9,7 @@ namespace SolarMag.com.Models
     {
         public int Id { get; set; }
 
-        public uint NoCivique { get; set; }
+        public int NoCivique { get; set; }
 
         public string Adresse { get; set; }
 

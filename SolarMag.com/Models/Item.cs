@@ -43,7 +43,7 @@ namespace SolarMag.com.Models
         [Display(Name = "Stock")]
         [Required(ErrorMessage = "Quantité du produit requise")]
         [Range(0, 1000000, ErrorMessage = "Valeur de 0 à 1000000")]
-        public uint Quantite { get; set; }
+        public int QuantiteStock { get; set; }
 
         //Pour identifer les sous- produits  genre piles, panneau, accessoires et kit
         public enum Categories

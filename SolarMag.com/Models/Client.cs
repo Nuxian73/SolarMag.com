@@ -7,7 +7,7 @@ namespace SolarMag.com.Models
 {
     public class Client : Compte
     {
-        public uint ClientId { get; set; }
+        public int ClientId { get; set; }
 
         ////facturation livraison
         //public string NoFacture { get; set; }

@@ -17,12 +17,6 @@
         <th>
             @Html.DisplayNameFor(model => model.Prenom)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NoFacture)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BonLivraison)
-        </th>
         <th></th>
     </tr>
 
@@ -33,12 +27,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Prenom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NoFacture)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BonLivraison)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

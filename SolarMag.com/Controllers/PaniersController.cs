@@ -146,14 +146,15 @@ namespace SolarMag.com.Controllers
 
             if (i == null)
             {
-               
-                PanierItem panierItem = new PanierItem(ItemChoisi, quantite);
+
+                PanierItem panierItem = new PanierItem(ItemChoisi, 1);
                 PanierClient.PanierItems.Add(panierItem);
                 //db.Paniers.Add(PanierClient);
-               
+
             }
             else
-                PanierClient.PanierItems.Find(PanierItem => PanierItem.Item.Id == ItemId).Quantite++;
+                i.Quantite = (i.Quantite + 1);
+                //PanierClient.PanierItems.Find(PanierItem => PanierItem.Item.Id == ItemId).Quantite ;
             
 
             //   if (Panier.ItemList == null)

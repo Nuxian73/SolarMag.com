@@ -14,9 +14,9 @@ namespace SolarMag.com.Models
         public virtual Item Item { get; set; }
         
         [Display(Name = "Quantité")]
-        public uint Quantite { get; set; }
+        public int Quantite { get; set; }
 
-        public PanierItem(Item item, uint quantite)
+        public PanierItem(Item item, int quantite)
         {
             Item = item;
             Quantite = quantite;
