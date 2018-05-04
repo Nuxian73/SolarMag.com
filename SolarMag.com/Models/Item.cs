@@ -65,6 +65,7 @@ namespace SolarMag.com.Models
         }
 
         [ReadOnly(true)]
+        [Required(ErrorMessage = "Choisir une catégorie")]
         public Categories Categorie;
 
         public Item()

@@ -47,26 +47,32 @@ namespace SolarMag.com.Controllers
         }
 
         // GET: Items/Create
-        public ActionResult Create()
+        public ActionResult Create(int? ValeurSelectionnee)
         {
-            return View();
-        }
-
-        // POST: Items/Create
-        // Afin de déjouer les attaques par sur-validation, activez les propriétés spécifiques que vous voulez lier. Pour 
-        // plus de détails, voir  https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nom,NoReference,Fabricant,Description,Poids,Garantie,Prix")] Item item)
-        {
-            if (ModelState.IsValid)
+            if (ValeurSelectionnee != null)
             {
-                db.Items.Add(item);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                string NomControleur = "";
+                switch ((Item.Categories)ValeurSelectionnee)
+                {
+                    case Item.Categories.Accessoire:
+                        NomControleur = "Accessoires";
+                        break;
+                    case Item.Categories.Convertiseur:
+                        NomControleur = "Convertiseurs";
+                        break;
+                    case Item.Categories.Kit:
+                        NomControleur = "Kits";
+                        break;
+                    case Item.Categories.PanneauSolaire:
+                        NomControleur = "PanneauSolaires";
+                        break;
+                    case Item.Categories.Pile:
+                        NomControleur = "Piles";
+                        break;
+                }
+                return RedirectToAction("Create", NomControleur);
             }
-
-            return View(item);
+            return View();
         }
 
         // GET: Items/Edit/5
