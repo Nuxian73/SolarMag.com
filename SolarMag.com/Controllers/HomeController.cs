@@ -22,7 +22,7 @@ namespace SolarMag.com.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Vous pouvez nous joindre facilement";
 
             return View();
         }
