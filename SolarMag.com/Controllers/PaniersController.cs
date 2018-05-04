@@ -34,6 +34,8 @@ namespace SolarMag.com.Controllers
             {
                 return HttpNotFound();
             }
+            Client c = db.Clients.Where(ClientDb => ClientDb.Panier.Id == id).FirstOrDefault();
+            ViewBag.ClientChoisi = c;
             return View(panier);
         }
 
@@ -138,7 +140,7 @@ namespace SolarMag.com.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            uint quantite = 1;
+            int quantite = 1;
 
             Panier PanierClient = db.Paniers.Find(ClientChoisi.Panier.Id);
 
@@ -154,20 +156,6 @@ namespace SolarMag.com.Controllers
             }
             else
                 i.Quantite = (i.Quantite + 1);
-                //PanierClient.PanierItems.Find(PanierItem => PanierItem.Item.Id == ItemId).Quantite ;
-            
-
-            //   if (Panier.ItemList == null)
-            //       Panier.ItemList = new Dictionary<Item, uint>();
-
-            //    if (Panier.ItemList.ContainsKey(Item))
-            //      {
-            //          Quantite = Panier.ItemList[Item];
-            //         
-            //     }
-            //     Panier.ItemList[Item] = Quantite;
-
-
 
            // TryUpdateModel(PanierClient);
             db.Entry(PanierClient).State = EntityState.Modified;
