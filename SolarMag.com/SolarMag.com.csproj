@@ -294,6 +294,7 @@
     <Content Include="Views\Commandes\Details.cshtml" />
     <Content Include="Views\Commandes\Edit.cshtml" />
     <Content Include="Views\Commandes\Index.cshtml" />
+    <Content Include="Views\Paniers\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
