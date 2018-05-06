@@ -288,7 +288,6 @@
     <Content Include="Views\Paniers\Create.cshtml" />
     <Content Include="Views\Paniers\Delete.cshtml" />
     <Content Include="Views\Paniers\Details.cshtml" />
-    <Content Include="Views\Paniers\Edit.cshtml" />
     <Content Include="Views\Paniers\Index.cshtml" />
     <Content Include="Views\Commandes\Create.cshtml" />
     <Content Include="Views\Commandes\Delete.cshtml" />
